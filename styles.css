@@ -1,0 +1,355 @@
+@font-face {
+  font-family: 'Satoshi';
+  src: url('fonts/Satoshi-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  touch-action: manipulation;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, sans-serif;
+  background: #F9F9F9;
+  color: #333;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+/* Home */
+.home {
+  max-width: 800px;
+  margin: 0 auto;
+  padding-bottom: 5rem;
+}
+
+.clients-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+/* Client card */
+.client-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 1.25rem;
+  box-shadow: 0 5px 6.5px 0 rgba(0, 0, 0, 0.14);
+  cursor: pointer;
+  transition: box-shadow 0.2s;
+}
+
+.client-card:hover {
+  box-shadow: 0 5px 6.5px 0 rgba(0, 0, 0, 0.14);
+}
+
+.client-card-name {
+  font-family: 'Satoshi', system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin: 0 0 0.75rem 0;
+}
+
+.client-card-products {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 0.9rem;
+  color: #B2ABAB;
+}
+
+.client-card-products li {
+  margin-bottom: 0.25rem;
+}
+
+.client-card-products .qty {
+  color: #e6b800;
+  font-weight: 600;
+}
+
+.client-card-total {
+  font-family: 'Satoshi', system-ui, sans-serif;
+  text-align: right;
+  font-weight: 600;
+  margin-top: 0.75rem;
+  font-size: 1rem;
+}
+
+/* Add client card */
+.add-client-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 1.25rem;
+  box-shadow: 0 5px 6.5px 0 rgba(0, 0, 0, 0.14);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 120px;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+
+.add-client-card:hover {
+  background: #fafafa;
+  box-shadow: 0 5px 6.5px 0 rgba(0, 0, 0, 0.14);
+}
+
+.add-client-card .icon-plus {
+  font-size: 2.5rem;
+  color: #e6b800;
+  font-weight: 300;
+  line-height: 1;
+}
+
+/* Footer */
+.footer {
+  margin-top: 1.5rem;
+  text-align: right;
+}
+
+.total-label {
+  display: block;
+  font-size: 0.9rem;
+  color: #B2ABAB;
+}
+
+.total-value {
+  font-family: 'Satoshi', system-ui, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+/* Generate PDF button */
+.btn-generate-pdf {
+  font-family: 'Satoshi', system-ui, sans-serif;
+  position: fixed;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #e6b800;
+  color: #333;
+  border: none;
+  border-radius: 999px;
+  padding: 0.65rem 1.75rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 5px 6.5px 0 rgba(0, 0, 0, 0.14);
+  transition: background 0.2s, transform 0.2s;
+}
+
+.btn-generate-pdf:hover {
+  background: #d4a800;
+}
+
+.btn-generate-pdf:active {
+  transform: translateX(-50%) scale(0.98);
+}
+
+/* Overlay */
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s, visibility 0.2s;
+}
+
+.overlay.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.overlay-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+}
+
+.overlay-content {
+  position: relative;
+  background: #fff;
+  border-radius: 20px;
+  padding: 1.5rem;
+  max-width: 400px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 5px 6.5px 0 rgba(0, 0, 0, 0.14);
+}
+
+/* Persona header */
+.persona-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.persona-name {
+  font-family: 'Satoshi', system-ui, sans-serif;
+  flex: 1;
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #575252;
+}
+
+.persona-name-input {
+  font-family: 'Satoshi', system-ui, sans-serif;
+  flex: 1;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #575252;
+  border: 2px solid #e6b800;
+  border-radius: 8px;
+  padding: 0.25rem 0.5rem;
+}
+
+.btn-edit-name,
+.btn-delete {
+  font-family: 'Satoshi', system-ui, sans-serif;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.25rem;
+  color: #B2ABAB;
+  transition: color 0.2s;
+}
+
+.btn-edit-name:hover {
+  color: #575252;
+}
+
+.btn-delete {
+  color: #c62828;
+}
+
+.btn-delete:hover {
+  color: #b71c1c;
+}
+
+/* Product list */
+.product-list {
+  list-style: none;
+  margin: 0 0 1rem 0;
+  padding: 0;
+}
+
+.product-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.75rem;
+  background: transparent;
+  border: 1px solid #B2ABAB;
+  border-radius: 999px;
+  margin-bottom: 0.5rem;
+}
+
+.product-row-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.product-row-qty {
+  color: #e6b800;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.product-row-name {
+  color: #575252;
+}
+
+.product-row-price {
+  color: #B2ABAB;
+  font-size: 0.85rem;
+}
+
+.product-row-actions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.btn-qty {
+  font-family: 'Satoshi', system-ui, sans-serif;
+  width: 38px;
+  min-width: 38px;
+  height: 38px;
+  min-height: 38px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: #575252;
+  color: #fff;
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background 0.2s;
+}
+
+.btn-qty:hover {
+  background: #3d3a3a;
+}
+
+.btn-qty:disabled {
+  background: #B2ABAB;
+  cursor: not-allowed;
+}
+
+/* Persona footer */
+.persona-footer {
+  text-align: right;
+  margin-bottom: 1rem;
+}
+
+.persona-total-label {
+  display: block;
+  font-size: 0.9rem;
+  color: #B2ABAB;
+}
+
+.persona-total-value {
+  font-family: 'Satoshi', system-ui, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #575252;
+}
+
+/* Close button */
+.btn-close {
+  font-family: 'Satoshi', system-ui, sans-serif;
+  width: 100%;
+  background: #e6b800;
+  color: #333;
+  border: none;
+  border-radius: 999px;
+  padding: 0.65rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 5px 6.5px 0 rgba(0, 0, 0, 0.14);
+  transition: background 0.2s;
+}
+
+.btn-close:hover {
+  background: #d4a800;
+}
