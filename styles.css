@@ -71,7 +71,7 @@ body {
 }
 
 .client-card-products .qty {
-  color: #e6b800;
+  color: #FFD000;
   font-weight: 600;
 }
 
@@ -104,7 +104,7 @@ body {
 
 .add-client-card .icon-plus {
   font-size: 2.5rem;
-  color: #e6b800;
+  color: #FFD000;
   font-weight: 300;
   line-height: 1;
 }
@@ -131,10 +131,10 @@ body {
 .btn-generate-pdf {
   font-family: 'Satoshi', system-ui, sans-serif;
   position: fixed;
-  bottom: 1.5rem;
+  bottom: 100px;
   left: 50%;
   transform: translateX(-50%);
-  background: #e6b800;
+  background: #FFD000;
   color: #333;
   border: none;
   border-radius: 999px;
@@ -147,7 +147,7 @@ body {
 }
 
 .btn-generate-pdf:hover {
-  background: #d4a800;
+  background: #E6BC00;
 }
 
 .btn-generate-pdf:active {
@@ -206,7 +206,7 @@ body {
   margin: 0;
   font-size: 1.25rem;
   font-weight: 600;
-  color: #575252;
+  color: #4C565C;
 }
 
 .persona-name-input {
@@ -214,8 +214,8 @@ body {
   flex: 1;
   font-size: 1.25rem;
   font-weight: 600;
-  color: #575252;
-  border: 2px solid #e6b800;
+  color: #4C565C;
+  border: 2px solid #FFD000;
   border-radius: 8px;
   padding: 0.25rem 0.5rem;
 }
@@ -232,7 +232,7 @@ body {
 }
 
 .btn-edit-name:hover {
-  color: #575252;
+  color: #4C565C;
 }
 
 .btn-delete {
@@ -267,13 +267,13 @@ body {
 }
 
 .product-row-qty {
-  color: #e6b800;
+  color: #FFD000;
   font-weight: 600;
   font-size: 0.95rem;
 }
 
 .product-row-name {
-  color: #575252;
+  color: #4C565C;
 }
 
 .product-row-price {
@@ -295,7 +295,7 @@ body {
   padding: 0;
   border: none;
   border-radius: 50%;
-  background: #575252;
+  background: #4C565C;
   color: #fff;
   font-size: 1.1rem;
   cursor: pointer;
@@ -307,7 +307,7 @@ body {
 }
 
 .btn-qty:hover {
-  background: #3d3a3a;
+  background: #3d454b;
 }
 
 .btn-qty:disabled {
@@ -331,14 +331,14 @@ body {
   font-family: 'Satoshi', system-ui, sans-serif;
   font-size: 1.25rem;
   font-weight: 700;
-  color: #575252;
+  color: #4C565C;
 }
 
 /* Close button */
 .btn-close {
   font-family: 'Satoshi', system-ui, sans-serif;
   width: 100%;
-  background: #e6b800;
+  background: #FFD000;
   color: #333;
   border: none;
   border-radius: 999px;
@@ -351,5 +351,5 @@ body {
 }
 
 .btn-close:hover {
-  background: #d4a800;
+  background: #E6BC00;
 }

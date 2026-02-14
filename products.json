@@ -1,8 +1,7 @@
 [
-  { "id": "sassi-solivi", "name": "Sassi solivi", "price": 30 },
+  { "id": "sassi-solivi", "name": "Sassi solivi", "price": 20 },
   { "id": "ciazz", "name": "Ciazz", "price": 30 },
-  { "id": "riserva", "name": "Riserva", "price": 30 },
-  { "id": "riserva-magnum", "name": "Riserva Magnum", "price": 30 },
-  { "id": "sassi-solivi-magnum", "name": "Sassi Magnum", "price": 30 },
-  { "id": "ciazz-magnum", "name": "Ciazz Magnum", "price": 30 }
+  { "id": "riserva", "name": "Riserva", "price": 35 },
+  { "id": "sassi-solivi-magnum", "name": "Sassi Magnum", "price": 42 },
+  { "id": "ciazz-magnum", "name": "Ciazz Magnum", "price": 62 }
 ]
