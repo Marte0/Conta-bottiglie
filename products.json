@@ -4,4 +4,5 @@
   { "id": "riserva", "name": "Riserva", "price": 35 },
   { "id": "sassi-solivi-magnum", "name": "Sassi Magnum", "price": 45 },
   { "id": "ciazz-magnum", "name": "Ciazz Magnum", "price": 65}
+  { "id": "degustazione", "name": "Degustazione", "price": 25}
 ]
